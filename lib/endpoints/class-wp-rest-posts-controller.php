@@ -31,6 +31,13 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 			),
 			'schema' => array( $this, 'get_public_item_schema' ),
 		) );
+
+		register_rest_route( $this->namespace, '/addMeta' ,array(
+				'methods'         => 'POST',
+				'callback'        => array( $this, 'updateMetaSeo' ),
+				'permission_callback' => array( $this, 'metaSeo_permissions_check'),
+		));
+
 		register_rest_route( $this->namespace, '/' . $this->rest_base . '/(?P<id>[\d]+)', array(
 			array(
 				'methods'         => WP_REST_Server::READABLE,
@@ -67,6 +74,117 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 	 * @param  WP_REST_Request $request Full details about the request.
 	 * @return WP_Error|boolean
 	 */
+
+
+
+	public function metaSeo_permissions_check( $request ) {
+
+		$post_type = get_post_type_object( $this->post_type );
+
+		if ( ! empty( $request['password'] ) && ! current_user_can( $post_type->cap->publish_posts ) ) {
+			return new WP_Error( 'rest_cannot_publish', __( 'Sorry, you are not allowed to create metas for this data' ), array( 'status' => rest_authorization_required_code() ) );
+		}
+
+		if ( ! empty( $request['author'] ) && get_current_user_id() !== $request['author'] && ! current_user_can( $post_type->cap->edit_others_posts ) ) {
+			return new WP_Error( 'rest_cannot_edit_others', __( 'You are not allowed to create metas for this user' ), array( 'status' => rest_authorization_required_code() ) );
+		}
+
+		if ( ! empty( $request['sticky'] ) && ! current_user_can( $post_type->cap->edit_others_posts ) ) {
+			return new WP_Error( 'rest_cannot_assign_sticky', __( 'You do not have permission to make  this changes.' ), array( 'status' => rest_authorization_required_code() ) );
+		}
+
+		if ( ! current_user_can( $post_type->cap->create_posts ) ) {
+			return new WP_Error( 'rest_cannot_create', __( 'Sorry, you are not allowed to create new metas.' ), array( 'status' => rest_authorization_required_code() ) );
+		}
+		return true;
+	}
+
+
+	public function updateMetaSeo($request) {
+		
+		$post_id 					= mysql_escape_string($request['post_id']);
+		$posts_optimized_id 		= mysql_escape_string($request['posts_optimized_id']);
+		$posts_need_to_optimize_id 	= mysql_escape_string($request['posts_need_to_optimize_id']);
+		$posts_prepare_to_optimize 	= mysql_escape_string($request['posts_prepare_to_optimize']);
+		$title 						= mysql_escape_string($request['title']);
+		$alt_text 					= mysql_escape_string($request['alt_text']);
+		$legend 					= mysql_escape_string($request['legend']);
+		$description 				= mysql_escape_string($request['description']);
+		$link 						= mysql_escape_string($request['link']);
+
+
+
+		if(!$title || !$description || !$post_id)
+		{
+			$error = array('status' => 404 ,'message'=>'Missing Data');
+			return $error;
+		}
+		else
+		{
+			global $wpdb;
+
+			$data_array = array('post_id' 		=> $post_id,
+								'title'   		=> $title,
+								'description'	=> $description);
+			$tags_array = array('%d','%s','%s');
+
+			
+			if($posts_optimized_id)
+			{
+				$data_array['posts_optimized_id'] = $posts_optimized_id;
+				array_push($tags_array, '%s');
+			}
+		
+			if($posts_need_to_optimize_id)
+			{
+
+				$data_array['posts_need_to_optimize_id'] = $posts_need_to_optimize_id;
+				array_push($tags_array, '%s');
+			}
+			
+			if($posts_prepare_to_optimize)
+			{
+
+				$data_array['posts_prepare_to_optimize'] = $posts_prepare_to_optimize;
+				array_push($tags_array, '%s');
+			}
+
+			if($alt_text)
+			{
+				$data_array['alt_text'] = $alt_text;
+				array_push($tags_array, '%s');
+			}
+
+			if($legend)
+			{
+				$data_array['legend'] = $legend;
+				array_push($tags_array, '%s');
+			}
+
+			if($link)
+			{
+
+				$data_array['link'] = $link;
+				array_push($tags_array, '%s');
+			}
+
+			
+			$result =  $wpdb->insert('wp_metaseo_images',$data_array,$tags_array);
+			if($result == false)
+			{
+				$error = array('status' => 404 ,'message'=>'Database Error!');
+				return $error;
+			}
+			else
+			{
+				$response = array('status' => 200 ,'message'=>'Data succesfully updated!');
+				return $response;
+			}
+
+		}
+	}
+	
+	
 	public function get_items_permissions_check( $request ) {
 
 		$post_type = get_post_type_object( $this->post_type );

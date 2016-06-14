@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: WP REST API
- * Description: JSON-based REST API for WordPress, originally developed as part of GSoC 2013.
- * Author: WP REST API Team
- * Author URI: http://v2.wp-api.org
+ * Plugin Name:Creatx  WP REST API
+ * Description: Extension of JSON-based REST API for WordPrress, that adds a few apis for creatx.io.
+ * Author: WP REST API Team, thought(x)
+ * Author URI: http://creatx.io
  * Version: 2.0-beta13.1
- * Plugin URI: https://github.com/WP-API/WP-API
+ * Plugin URI: https://github.com/thoughtx/Creatx-WP-API
  * License: GPL2+
  */
 

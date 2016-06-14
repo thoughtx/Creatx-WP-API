@@ -1,6 +1,5 @@
-# WP REST API v2.0 (WP-API)
-
-Access your WordPress site's data through an easy-to-use HTTP REST API.
+# CREATX WP REST API  
+This is fork of WP REST API that adds few apis for Creatx.io.
 
 [![Build Status](https://travis-ci.org/WP-API/WP-API.svg?branch=develop)](https://travis-ci.org/WP-API/WP-API)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/WP-API/WP-API/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/WP-API/WP-API/?branch=develop)

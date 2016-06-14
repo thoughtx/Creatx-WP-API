@@ -8,7 +8,12 @@
         {
             "name": "WP-API Team",
             "homepage": "http://wp-api.org/"
+        },
+	{
+            "name": "thought(x)",
+            "homepage": "http://creatx.io/"
         }
+
     ],
     "support": {
         "issues": "https://github.com/WP-API/WP-API/issues",

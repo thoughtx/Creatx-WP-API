@@ -1,13 +1,15 @@
 <?php
 
+// require_once(ABSPATH . '../../../../wp-admin/includes/file.php');
+
+require_once(ABSPATH . 'wp-admin/includes/media.php');
+require_once(ABSPATH . 'wp-admin/includes/file.php');
+require_once(ABSPATH . 'wp-admin/includes/image.php');
+
 class WP_REST_Posts_Controller extends WP_REST_Controller {
 
-
-	require_once(ABSPATH . 'wp-admin/includes/media.php');
-	require_once(ABSPATH . 'wp-admin/includes/file.php');
-	require_once(ABSPATH . 'wp-admin/includes/image.php');
-
 	protected $post_type;
+	// global $wpdb;
 
 	public function __construct( $post_type ) {
 		$this->post_type = $post_type;
@@ -16,11 +18,7 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 		$this->rest_base = ! empty( $obj->rest_base ) ? $obj->rest_base : $obj->name;
 	}
 
-	/**
-	 * Register the routes for the objects of the controller.
-	 */
 	public function register_routes() {
-
 		register_rest_route( $this->namespace, '/' . $this->rest_base, array(
 			array(
 				'methods'         => WP_REST_Server::READABLE,
@@ -37,15 +35,21 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 			'schema' => array( $this, 'get_public_item_schema' ),
 		) );
 
-		register_rest_route( $this->namespace, '/addMeta' ,array(
-				'methods'         => 'POST',
-				'callback'        => array( $this, 'updateMetaSeo' ),
-				'permission_callback' => array( $this, 'metaSeo_permissions_check'),
-		));
+		// register_rest_route( $this->namespace, '/addMeta' ,array(
+		// 		'methods'         => 'POST',
+		// 		'callback'        => array( $this, 'updateMetaSeo' ),
+		// 		'permission_callback' => array( $this, 'metaSeo_permissions_check'),
+		// ));
 
 		register_rest_route( $this->namespace, '/addPostMeta' ,array(
 				'methods'         => 'POST',
 				'callback'        => array( $this, 'addPostMeta' ),
+				'permission_callback' => array( $this, 'metaSeo_permissions_check'),
+		));
+
+		register_rest_route( $this->namespace, '/addTaxanomy' ,array(
+				'methods'         => 'POST',
+				'callback'        => array( $this, 'addTaxanomy' ),
 				'permission_callback' => array( $this, 'metaSeo_permissions_check'),
 		));
 
@@ -87,7 +91,6 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 	 */
 
 
-
 	public function metaSeo_permissions_check( $request ) {
 
 		$post_type = get_post_type_object( $this->post_type );
@@ -110,40 +113,93 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 		return true;
 	}
 
+
+
+	public function localUrl($url)
+	{
+		$tmp = download_url( $url );
+		$file_array = array(
+				'name' => basename( $url ),
+				'tmp_name' => $tmp
+		);
+		if ( is_wp_error( $tmp ) ) {
+				@unlink( $file_array[ 'tmp_name' ] );
+				return $tmp;
+		}
+		$id = media_handle_sideload( $file_array, 0 );
+		if ( is_wp_error( $id ) ) {
+				@unlink( $file_array['tmp_name'] );
+				return $id;
+		}
+		$attachment_url = wp_get_attachment_url( $id );
+		return $attachment_url;
+	}
+
+
+	public function addTaxanomy($request)
+	{
+
+		$post_id = $request['post_id'];
+		$append = mysql_escape_string($request['append']);
+		$category_array = $request['categories'];
+		$tags_array = $request['tags'];
+
+		if(!$post_id)
+		{
+			$error = array('status' => 404 ,'message'=>'Required fields not present!');
+			return $error;
+		}
+
+		if(!$append)
+			$append = false;
+
+		global $wpdb;
+
+		$wpdb->get_results('START TRANSACTION;');
+		if($category_array)
+		{
+			$result = wp_set_object_terms($post_id,$category_array,'category',$append);
+			if($result == false)
+			{
+				$wpdb->get_results('ROLLBACK');
+				$error = array('status' => 404 ,'message'=>'Database Error!');
+				return $error;
+			}
+		}
+
+		if($tags_array)
+		{
+			$result = wp_set_object_terms($post_id,$tags_array,'post_tag',$append);
+			if($result == false)
+			{
+				$wpdb->get_results('ROLLBACK');
+				$error = array('status' => 404 ,'message'=>'Database Error!');
+				return $error;
+			}
+		}
+
+		$wpdb->get_results('COMMIT');
+		$result = array('status' => 200 ,'message'=>'Data succesfully added');
+		return $result;
+	}
+
+
 	public function addPostMeta($request) {
 
-		$post_id 						= mysql_escape_string($request['post_id']);
-		$edit_lock 						= mysql_escape_string($request['_edit_lock']);
-		$edit_last     		 			= mysql_escape_string($request['_edit_last']);
-		$metaseo_metatitle 				= mysql_escape_string($request['_metaseo_metatitle']);
-		$metaseo_metadesc 				= mysql_escape_string($request['_metaseo_metadesc']);
-		$metaseo_metaopengraph_title  	= mysql_escape_string($request['_metaseo_metaopengraph-title']);
-		$metaseo_metaopengraph_desc 	= mysql_escape_string($request['_metaseo_metaopengraph-desc']);
-		$metaseo_metaopengraph_image	= mysql_escape_string($request['_metaseo_metaopengraph-image']);
-		$metaseo_metatwitter_title  	= mysql_escape_string($request['_metaseo_metatwitter-title']);
-		$metaseo_metatwitter_desc 		= mysql_escape_string($request['_metaseo_metatwitter-desc']);
-		$metaseo_metatwitter_image		= mysql_escape_string($request['_metaseo_metatwitter-image']);
-		$wpms_validate_analysis			= mysql_escape_string($request['wpms_validate_analysis']);
-		$thumbnail_id					= mysql_escape_string($request['_thumbnail_id']);
+		$post_id = mysql_escape_string($request['post_id']);
+		$edit_lock = mysql_escape_string($request['_edit_lock']);
+		$edit_last = mysql_escape_string($request['_edit_last']);
+		$metaseo_metatitle = mysql_escape_string($request['_metaseo_metatitle']);
+		$metaseo_metadesc = mysql_escape_string($request['_metaseo_metadesc']);
+		$metaseo_metaopengraph_title = mysql_escape_string($request['_metaseo_metaopengraph-title']);
+		$metaseo_metaopengraph_desc = mysql_escape_string($request['_metaseo_metaopengraph-desc']);
+		$metaseo_metaopengraph_image = mysql_escape_string($request['_metaseo_metaopengraph-image']);
+		$metaseo_metatwitter_title = mysql_escape_string($request['_metaseo_metatwitter-title']);
+		$metaseo_metatwitter_desc = mysql_escape_string($request['_metaseo_metatwitter-desc']);
+		$metaseo_metatwitter_image = mysql_escape_string($request['_metaseo_metatwitter-image']);
+		$wpms_validate_analysis	= mysql_escape_string($request['wpms_validate_analysis']);
+		$thumbnail_id = mysql_escape_string($request['_thumbnail_id']);
 
-
-		// $url = $metaseo_metaopengraph_image ;
-		// $tmp = download_url( $url );
-		// $file_array = array(
-		// 		'name' => basename( $url ),
-		// 		'tmp_name' => $tmp
-		// );
-		// if ( is_wp_error( $tmp ) ) {
-		// 		@unlink( $file_array[ 'tmp_name' ] );
-		// 		return $tmp;
-		// }
-		// $id = media_handle_sideload( $file_array, 0 );
-		// if ( is_wp_error( $id ) ) {
-		// 		@unlink( $file_array['tmp_name'] );
-		// 		return $id;
-		// }
-		// $attachment_url = wp_get_attachment_url( $id );
-		// $this->localUrl($metaseo_metaopengraph_image);
 
 		if(!$post_id)
 		{
@@ -229,32 +285,7 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 			if($metaseo_metaopengraph_image)
 			{
 				$data_array['meta_key'] 	= '_metaseo_metaopengraph-image';
-
-				// $save_directory = '';
-				// $filename = basename($metaseo_metaopengraph_image);
-				// $save_directory = $save_directory.$filename;
-				// file_put_contents($save_directory, fopen($metaseo_metaopengraph_image, 'r'));
-
-				$url = $metaseo_metaopengraph_image ;
-				$tmp = download_url( $url );
-				$file_array = array(
-						'name' => basename( $url ),
-						'tmp_name' => $tmp
-				);
-				if ( is_wp_error( $tmp ) ) {
-						@unlink( $file_array[ 'tmp_name' ] );
-						return $tmp;
-				}
-				$id = media_handle_sideload( $file_array, 0 );
-				if ( is_wp_error( $id ) ) {
-						@unlink( $file_array['tmp_name'] );
-						return $id;
-				}
-				$attachment_url = wp_get_attachment_url( $id );
-
-				$data_array['meta_value']	= $attachment_url;
-
-
+				$data_array['meta_value']	= $this->localUrl($metaseo_metaopengraph_image);
 				$tags_array = array("%d","%s","%s");
 				$result =  $wpdb->insert('wp_postmeta',$data_array,$tags_array);
 				if($result == false)
@@ -297,33 +328,8 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 			if($metaseo_metatwitter_image)
 			{
 				$data_array['meta_key'] 	= '_metaseo_metatwitter-image';
-				// $data_array['meta_value']	= $metaseo_metatwitter_image;
 				$tags_array = array("%d","%s","%s");
-
-				// $save_directory = '';
-				// $filename = basename($metaseo_metatwitter_image);
-				// $save_directory = $save_directory.$filename;
-				// file_put_contents($save_directory, fopen($metaseo_metatwitter_image, 'r'));
-
-				$url = $metaseo_metatwitter_image ;
-				$tmp = download_url( $url );
-				$file_array = array(
-						'name' => basename( $url ),
-						'tmp_name' => $tmp
-				);
-				if ( is_wp_error( $tmp ) ) {
-						@unlink( $file_array[ 'tmp_name' ] );
-						return $tmp;
-				}
-				$id = media_handle_sideload( $file_array, 0 );
-				if ( is_wp_error( $id ) ) {
-						@unlink( $file_array['tmp_name'] );
-						return $id;
-				}
-				$attachment_url = wp_get_attachment_url( $id );
-				$data_array['meta_value']	= $attachment_url;
-
-
+				$data_array['meta_value']	= $this->localUrl($metaseo_metatwitter_image);
 				$result =  $wpdb->insert('wp_postmeta',$data_array,$tags_array);
 				if($result == false)
 				{
@@ -372,89 +378,90 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 	}
 
 
-	public function updateMetaSeo($request) {
-		$post_id 					= mysql_escape_string($request['post_id']);
-		$posts_optimized_id 		= mysql_escape_string($request['posts_optimized_id']);
-		$posts_need_to_optimize_id 	= mysql_escape_string($request['posts_need_to_optimize_id']);
-		$posts_prepare_to_optimize 	= mysql_escape_string($request['posts_prepare_to_optimize']);
+	// public function updateMetaSeo($request) {
+	//
+	// 	$post_id = mysql_escape_string($request['post_id']);
+	// 	$posts_optimized_id = mysql_escape_string($request['posts_optimized_id']);
+	// 	$posts_need_to_optimize_id = mysql_escape_string($request['posts_need_to_optimize_id']);
+	// 	$posts_prepare_to_optimize = mysql_escape_string($request['posts_prepare_to_optimize']);
+	// 	$title = mysql_escape_string($request['title']);
+	// 	$alt_text = mysql_escape_string($request['alt_text']);
+	// 	$legend = mysql_escape_string($request['legend']);
+	// 	$description = mysql_escape_string($request['description']);
+	// 	$link = mysql_escape_string($request['link']);
+	//
+	//
+	//
+	// 	if(!$title || !$description || !$post_id)
+	// 	{
+	// 		$error = array('status' => 404 ,'message'=>'Missing Data');
+	// 		return $error;
+	// 	}
+	// 	else
+	// 	{
+	// 		global $wpdb;
+	//
+	// 		$data_array = array('post_id' 		=> $post_id,
+	// 							'title'   		=> $title,
+	// 							'description'	=> $description);
+	// 		$tags_array = array('%d','%s','%s');
+	//
+	//
+	// 		if($posts_optimized_id)
+	// 		{
+	// 			$data_array['posts_optimized_id'] = $posts_optimized_id;
+	// 			array_push($tags_array, '%s');
+	// 		}
+	//
+	// 		if($posts_need_to_optimize_id)
+	// 		{
+	//
+	// 			$data_array['posts_need_to_optimize_id'] = $posts_need_to_optimize_id;
+	// 			array_push($tags_array, '%s');
+	// 		}
+	//
+	// 		if($posts_prepare_to_optimize)
+	// 		{
+	//
+	// 			$data_array['posts_prepare_to_optimize'] = $posts_prepare_to_optimize;
+	// 			array_push($tags_array, '%s');
+	// 		}
+	//
+	// 		if($alt_text)
+	// 		{
+	// 			$data_array['alt_text'] = $alt_text;
+	// 			array_push($tags_array, '%s');
+	// 		}
+	//
+	// 		if($legend)
+	// 		{
+	// 			$data_array['legend'] = $legend;
+	// 			array_push($tags_array, '%s');
+	// 		}
+	//
+	// 		if($link)
+	// 		{
+	//
+	// 			$data_array['link'] = $link;
+	// 			array_push($tags_array, '%s');
+	// 		}
+	//
+	//
+	// 		$result =  $wpdb->insert('wp_metaseo_images',$data_array,$tags_array);
+	// 		if($result == false)
+	// 		{
+	// 			$error = array('status' => 404 ,'message'=>'Database Error!');
+	// 			return $error;
+	// 		}
+	// 		else
+	// 		{
+	// 			$response = array('status' => 200 ,'message'=>'Data succesfully updated!');
+	// 			return $response;
+	// 		}
+	//
+	// 	}
+	// }
 
-		$title 						= mysql_escape_string($request['title']);
-		$alt_text 					= mysql_escape_string($request['alt_text']);
-		$legend 					= mysql_escape_string($request['legend']);
-		$description 				= mysql_escape_string($request['description']);
-		$link 						= mysql_escape_string($request['link']);
-
-
-
-		if(!$title || !$description || !$post_id)
-		{
-			$error = array('status' => 404 ,'message'=>'Missing Data');
-			return $error;
-		}
-		else
-		{
-			global $wpdb;
-
-			$data_array = array('post_id' 		=> $post_id,
-								'title'   		=> $title,
-								'description'	=> $description);
-			$tags_array = array('%d','%s','%s');
-
-
-			if($posts_optimized_id)
-			{
-				$data_array['posts_optimized_id'] = $posts_optimized_id;
-				array_push($tags_array, '%s');
-			}
-
-			if($posts_need_to_optimize_id)
-			{
-
-				$data_array['posts_need_to_optimize_id'] = $posts_need_to_optimize_id;
-				array_push($tags_array, '%s');
-			}
-
-			if($posts_prepare_to_optimize)
-			{
-
-				$data_array['posts_prepare_to_optimize'] = $posts_prepare_to_optimize;
-				array_push($tags_array, '%s');
-			}
-
-			if($alt_text)
-			{
-				$data_array['alt_text'] = $alt_text;
-				array_push($tags_array, '%s');
-			}
-
-			if($legend)
-			{
-				$data_array['legend'] = $legend;
-				array_push($tags_array, '%s');
-			}
-
-			if($link)
-			{
-
-				$data_array['link'] = $link;
-				array_push($tags_array, '%s');
-			}
-
-
-			$result =  $wpdb->insert('wp_metaseo_images',$data_array,$tags_array);
-			if($result == false)
-			{
-				$error = array('status' => 404 ,'message'=>'Database Error!');
-				return $error;
-			}
-			else
-			{
-				$response = array('status' => 200 ,'message'=>'Data succesfully updated!');
-				return $response;
-			}
-
-		}
-	}
 
 
 	public function get_items_permissions_check( $request ) {

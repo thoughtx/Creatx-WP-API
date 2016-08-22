@@ -1,0 +1,33 @@
+.wrap_sitemap_option{
+    width: 100%;
+    float: left;
+}
+
+.wpms_save_create_sitemaps , .spinner_save_sitemaps{
+    float: left;
+}
+
+.div_wpms_save_sitemaps{
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+}
+
+.div_sitemap_check_all{
+    width: 100%;
+    float: left;
+    margin: 10px 10px 0px 0px;
+}
+
+.wpms_wrap .nav-tab{
+    cursor: pointer;
+}
+
+.wpms_source_menu , .wpms_source_posts , .wpms_source_pages{
+    display: none;
+}
+
+.wpms_row_check_all_posts{
+    font-style: italic;
+    font-weight: bold;
+}

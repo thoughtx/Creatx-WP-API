@@ -1,0 +1,793 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPMS 1.2\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+
+msgid "Twitter username (without @)"
+msgstr "ID Twitter (sans le @)"
+
+msgid ""
+"2 plugins that are doing almost the same thing detected: disable AIO SEO or "
+"Yoast SEO to avoid conflict."
+msgstr ""
+"2 plugins sont présent et font tous les 2 du SEO: merci de désactiver AIO "
+"SEO ou Yoast SEO pour éviter les conflits"
+
+msgid ""
+"We have found that you’re using All In One SEO plugin, WP Meta SEO can "
+"import the meta from this plugin, %s"
+msgstr ""
+"Vous utilisez  le plugin All in one SEO, nous pouvons importer les meta de "
+"ce plugin pour vous, %s"
+
+msgid ""
+"We have found that you’re using Yoast SEO plugin, WP Meta SEO can import the "
+"meta from this plugin, %s"
+msgstr ""
+"Vous utilisez  le plugin Yoast SEO, nous pouvons importer les meta de ce "
+"plugin pour vous, %s"
+
+msgid "Results preview"
+msgstr "Prévisualisation"
+
+msgid ""
+"This is a preview of what your content will looks like in search engine "
+"results: title, description and URL"
+msgstr "Prévisualisation des résultats de recherche, titre, description et URL"
+
+msgid "Search engine title"
+msgstr "Titre"
+
+msgid ""
+"This is the title of your content that may be displayed in search engine "
+"results (meta title). By default it’s the content title (page title, post "
+"title…). 69 characters max allowed."
+msgstr ""
+"Ceci est le titre de votre contenu qui pourra être reprit par les moteurs de "
+"recherche (meta title). Par défaut il s'agit du titre du contenu. 69 "
+"caractères max"
+
+msgid "Search engine description"
+msgstr "Description"
+
+msgid ""
+"The description of your content that may be displayed in search engine "
+"results aka meta description. By default search engine take an excerpt from "
+"your content (depending on the search query). 156 characters max allowed."
+msgstr ""
+"Ceci est la description de votre contenu qui pourra être reprit par les "
+"moteurs de recherche (meta description). Par défaut il s'agit d'un extrait "
+"de votre contenu.156 caractères max"
+
+msgid "Facebook Title"
+msgstr "Titre facebook"
+
+msgid ""
+"Custom title to display when sharing this content on facebook, content title "
+"override"
+msgstr "Titre customisé lors du partage de ce contenu sur Facebook"
+
+msgid "Facebook Description"
+msgstr "Description Facebook"
+
+msgid ""
+"Custom description to display when sharing this content on facebook, content "
+"description override"
+msgstr "Description customisé lors du partage de ce contenu sur Facebook"
+
+msgid "Facebook Image"
+msgstr "Image Facebook"
+
+msgid ""
+"Custom image to display when sharing this content on facebook, content "
+"description override, recommended size is 1200px x 630px"
+msgstr ""
+"Image customisé lors du partage de ce contenu sur Facebook, taille "
+"recommandée 1200px x 630px"
+
+msgid "Twitter Title"
+msgstr "Titre Twitter"
+
+msgid ""
+"Custom title to display when sharing this content on twitter, content title "
+"override"
+msgstr "Titre customisé lors du partage de ce contenu sur Twitter"
+
+msgid "Twitter Description"
+msgstr "Description Twitter"
+
+msgid ""
+"Custom description to display when sharing this content on twitter, content "
+"description override"
+msgstr "Description customisé lors du partage de ce contenu sur Twitter"
+
+msgid "Twitter Image"
+msgstr "Image Twitter"
+
+msgid ""
+"Custom image to display when sharing this content on facebook, content "
+"description override, recommended min size 440px X 220px"
+msgstr ""
+"Image customisé lors du partage de ce contenu sur Twitter, taille "
+"recommandée 440px x 220px"
+
+msgid "Use Image"
+msgstr "Utiliser image"
+
+msgid " (because of date display)"
+msgstr " (because of date display)"
+
+msgid "(no parent)"
+msgstr "(no parent)"
+
+msgid "General"
+msgstr "General"
+
+msgid "Social"
+msgstr "Social"
+
+msgid "Page title word in content heading"
+msgstr "Mot du titre dans un titre du contenu"
+
+msgid "Page title word in content"
+msgstr "Mot du titre dans le contenu"
+
+msgid "Page url matches with page title"
+msgstr "URL de page correspond au titre de page"
+
+msgid "Meta title filled"
+msgstr "Meta titres complétés"
+
+msgid "Meta description filled"
+msgstr "Meta descriptions complétées"
+
+msgid "Wrong image resize"
+msgstr "Mauvaise taille d'image"
+
+msgid "Image have meta title or alt"
+msgstr "Les images ont des meta title ou alt"
+
+msgid "SEO Page optimization"
+msgstr "Optimisation moteur de recherche"
+
+msgid "Social for search engine"
+msgstr "Partage réseaux sociaux"
+
+msgid "Reload analysis"
+msgstr "Relancer analyse"
+
+msgid "Filter by date"
+msgstr "Filtrer par date"
+
+msgid "All dates"
+msgstr "Toutes les dates"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Image"
+msgstr "Image"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Optimization Info"
+msgstr "Info optimisation"
+
+msgid "Alternative text"
+msgstr "texte alternatif"
+
+msgid "Title"
+msgstr "Titre"
+
+msgid "Legend"
+msgstr "Légende"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Select All"
+msgstr "Tout selectionner"
+
+msgid "Filter"
+msgstr "Filtrer"
+
+msgid ""
+"We didn't find any image which needed to be updated regarding meta "
+"information"
+msgstr ""
+"Nous n'avons trouvé aucune image qui ont besoin d'être optimisé pour le SEO"
+
+msgid "This image has still not been inserted in any post!"
+msgstr "Cette image n'a été ajouté dans aucun de vos contenus"
+
+msgid "We found %s which needed to optimize"
+msgstr "Nous avons trouvé %s qui nécessite une optimisation"
+
+msgid "Replace?"
+msgstr "Remplacer ?"
+
+msgid "Replace All"
+msgstr "Tout remplacer"
+
+msgid "The post doesn't exist, please select another one"
+msgstr "Le post n'existe plus, merci d'en sélectionner un autre"
+
+msgid "There is a problem when update image name"
+msgstr "Erreur lors du changement de nom d'image"
+
+msgid "Image name changed"
+msgstr "Nom de l'image changé"
+
+msgid "Name already exist"
+msgstr "Le nom existe déjà"
+
+msgid "File doesn't existed"
+msgstr "Le fichier n'existe plus"
+
+msgid "Should not be empty"
+msgstr "Ne peut être vide"
+
+msgid "There is a problem during image meta update"
+msgstr "Un problème est survenue durant l'update des meta"
+
+msgid "This content has been deleted, please check again!"
+msgstr "Ce contenu a été supprimé, merci de revérifier!"
+
+msgid "The post haven't been updated, please check again!"
+msgstr "Ce post n'a pas été mis à jour, merci de revérifier"
+
+msgid "This image has been removed from the post, please check again!"
+msgstr "Cette image a été supprimée du contenu"
+
+msgid "Content of the post is empty, please check again"
+msgstr "Le contenu est vide, merci de revérifier"
+
+msgid "We can't get traffic rank from Alexa for this website"
+msgstr ""
+"Nous n'avons pas assez d'info (de trafic) Alexa pour avoir le \"Traffic Rank"
+"\""
+
+msgid "Meta Title"
+msgstr "Meta titre"
+
+msgid "Meta Description"
+msgstr "Meta description"
+
+msgid "(no title)"
+msgstr "(pas de titre)"
+
+msgid "Edit this item"
+msgstr "Editer cet item"
+
+msgid "Edit"
+msgstr "Editer"
+
+msgid "View"
+msgstr "Afficher"
+
+msgid "Preview"
+msgstr "Prévisualiser"
+
+msgid ""
+"This is a preview of what this content might looks like in Google's search "
+"results."
+msgstr ""
+"Prévisualisation de ce à quoi votre contenu peut ressembler dans les "
+"résultats de recherche"
+
+msgid "Snippet Preview %s"
+msgstr "Prévisualisation %s"
+
+msgid "Facebook profile URL"
+msgstr "Lien URL profil Facebook"
+
+msgid "Twitter Username"
+msgstr "Nom d'utilisateur Twitter"
+
+msgid "Meta block edition"
+msgstr "Block édition meta"
+
+msgid "Modification was saved"
+msgstr "Modifications sauvegardées"
+
+msgid "Meta title was not saved"
+msgstr "Meta titre non sauvegardé"
+
+msgid "Meta description was not saved"
+msgstr "Meta description non sauvegardé"
+
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+msgid "WP Meta SEO"
+msgstr "WP Meta SEO"
+
+msgid "Content meta"
+msgstr "Contenu meta"
+
+msgid "Image information"
+msgstr "Image information"
+
+msgid "Settings"
+msgstr "Paramètres"
+
+msgid "Activate meta block edition in content"
+msgstr "Activer l'édition des block de meta dans le contenu"
+
+msgid "This post is not existed or deleted, please select another one"
+msgstr "Ce post n'existe plus ou a été supprimé"
+
+msgid "Well done! This image is perfect now."
+msgstr "Bien joué ! Image remise à la bonne taille !"
+
+msgid "Oops! An error occured when updating the post, please try again"
+msgstr ""
+"Oups! Une erreur est survenue durant la mise à jour du post, merci de "
+"réessayer"
+
+msgid "Resize image"
+msgstr "Redimensionner image"
+
+msgid "Image sizes are good!"
+msgstr "Taille d'image OK!"
+
+msgid "Fix meta"
+msgstr "Améliorer meta"
+
+msgid "Edit meta"
+msgstr "Editer meta"
+
+msgid "N/A"
+msgstr "N/A"
+
+msgid "Poor"
+msgstr "Mauvaise qualité"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Good"
+msgstr "Bon"
+
+msgid "Bad"
+msgstr "Mauvais"
+
+msgid "Homepage meta title"
+msgstr "Meta info page d'accueil"
+
+msgid "Homepage meta description"
+msgstr "Description page d'accueil"
+
+msgid "Bulk copy"
+msgstr "Copy par lot"
+
+msgid "All content"
+msgstr "Tout le contenu"
+
+msgid "Selected posts"
+msgstr "Sélection de contenu"
+
+msgid "Content title as meta title"
+msgstr "Titre contenu > meta titre"
+
+msgid "All Images"
+msgstr "Toutes les images"
+
+msgid "Selected images"
+msgstr "Sélection d'images"
+
+msgid "Image name as alt text"
+msgstr "Nom image > alt texte"
+
+msgid "Image name as image title"
+msgstr "Nom image > titre d'image"
+
+msgid ""
+"Warning, you're about to replace existing image alt or tile content, are you "
+"sire about that?"
+msgstr ""
+"Vous êtes sur le point de remplacer des attributs de vos images, vous êtes "
+"sûr ?"
+
+msgid "Twitter card type "
+msgstr "Type Twitter card"
+
+msgid "Summary"
+msgstr "Sommaire"
+
+msgid "Summary with large image"
+msgstr "Sommaire avec large image"
+
+msgid "Optimized at"
+msgstr "Optimisé à"
+
+msgid "Wrong resized images"
+msgstr "Image redimentionnées"
+
+msgid "Latest month new or updated content"
+msgstr "Contenu ajouté ou mis à jour le mois dernier"
+
+msgid "Image data filled (in content)"
+msgstr "Informations images complétées"
+
+msgid "More information about WP Meta SEO"
+msgstr "Plus d'info sur le plugin WP Meta SEO"
+
+msgid "Other plugins from JoomUnited"
+msgstr "Autres plugin de JoomUnited"
+
+msgid ""
+"Check if a word of this content title is also in a title heading (h1, h2...)"
+msgstr ""
+"Vérifie si un mot du titre de page est aussi présent dans un titre du "
+"contenu (h1, h2...)"
+
+msgid "Check if a word of this content title is also in the text"
+msgstr ""
+"Vérifie si un mot du titre de page est aussi présent dans le contenu texte"
+
+msgid "Does the page title match with the permalink (URL structure)"
+msgstr "Vérifie si le titre de page correspond à l'URL (permalien)"
+
+msgid "Is the meta title of this page filled?"
+msgstr "Est-ce que les meta titres sont complétés?"
+
+msgid "Is the meta description of this page filled?"
+msgstr "Est-ce que les meta description sont complétés?"
+
+msgid ""
+"Check for image HTML resizing in content (usually image resized using "
+"handles)"
+msgstr ""
+"Vérifie si des images sont redimensionnées en HTML (habituellement en "
+"utilisant les poignées)"
+
+msgid "Check for image Alt text and title"
+msgstr "Vérifie si les textes alt and titre d'images sont remplis"
+
+msgid ""
+"It's better using a permalink structure that is adding in your URL the "
+"category name and content title. This parameter can be changed in Settings > "
+"Permalinks WordPress menu. Tag recommended is %category%/%postname%"
+msgstr ""
+"Il est préférable d'utiliser des URL dont le nom de la catégorie et le titre "
+"de page sont en clair. Ce paramètre peut être modifié depuis le menu "
+"Paramètres > Permaliens. Le tag recommandé est %category%/%postname%"
+
+msgid ""
+"Meta titles are displayed in search engine results as a page title. It's a "
+"good thing for SEO to have some custom and attractive ones. Be sure to fill "
+"at least the met information on your most popular pages"
+msgstr ""
+"Les titres Meta sont affichés dans les résultats de recherche comme titre de "
+"page. C'est une bonne chose de mettre des titres accrocheurs pour avoir un "
+"plus grand nombre de clics."
+
+msgid ""
+"Meta descriptions are displayed in search engine results as a page "
+"description. It's a good thing for SEO to have some custom and attractive "
+"ones. Be sure to fill at least the meta information on your most popular "
+"pages."
+msgstr ""
+"Les Meta descroption sont affichés dans les résultats de recherche comme "
+"description de page. C'est une bonne chose de mettre des descriptions "
+"accrocheuses pour avoir un plus grand nombre de clics."
+
+msgid ""
+"Display image at its natural size, do not use HTML resize. It happens "
+"usually when you use handles to resize an image. You have a bulk edition "
+"tool to fix that."
+msgstr ""
+"Utilisez des images à leur taille naturelle, pas en les redimensionnant en "
+"HTML (avec les poignées). Avec WP Meta SEO, vous disposez d'un outil pour "
+"corriger cela"
+
+msgid ""
+"We recommend to use both alt text and image title. The main advantage is "
+"that it helps search engines discover your images and display them in image "
+"search results. Plus, these tags improve the accessibility of your site and "
+"give more information about your images. Use our bulk image tool to quickly "
+"check and fix that."
+msgstr ""
+"Nous vous recommandons de compléter les le textes alternatif et les titres "
+"d'images. L'avantage c'est que cela permet aux moteur de recherche d'indexer "
+"vos images et apporte plus de contenu à vos pages. utilisez l'outil "
+"d'édition par lot pour aller plus vite! "
+
+msgid ""
+"It is highly recommended to update or add new content on your website quite "
+"frequently. At least 3 updated or new content per month would be great :)"
+msgstr ""
+"Il est fortement recommandé de mettre à jour ou d'ajouter du contenu sur "
+"votre site pour être mieux référencé. Au moins 3 mises à jour ou ajout de "
+"contenu par mois serait parfait :)"
+
+msgid "Social networks meta"
+msgstr "Meta réseaux sociaux"
+
+msgid "Activate social edition"
+msgstr "Activer l'édition des meta pour les réseaux sociaux"
+
+msgid "Permalinks settings"
+msgstr "Paramètres permaliens"
+
+msgid "HTML image resizing"
+msgstr "Image redimensionnées en HTML"
+
+msgid "Image title/alt"
+msgstr "Titre text alt des images"
+
+msgid "New or updated content"
+msgstr "Nouveau ou mise à jour contenu"
+
+msgid "WP Meta SEO dashboard"
+msgstr "Tableau de bord WP Meta SEO"
+
+msgid "Latest WP Meta SEO News"
+msgstr "Dernière news WP Meta SEO"
+
+msgid "All Posts"
+msgstr "Tous les posts"
+
+msgid "We can't get rank of this site from Alexa.com!"
+msgstr "Impossible de déterminer le Traffic Rank Alexa pour ce site"
+
+msgid "Activate meta block edition below content"
+msgstr "Activer l'édition des meta info sous les contenu (pages, articles)"
+
+msgid "Well! This image is so good now."
+msgstr "Parfait! image optimisée"
+
+msgid "The default card type to use"
+msgstr "Type de Twitter card"
+
+msgid ""
+"Be careful you installed 2 extensions doing almost the same thing, please "
+"deactivate AIOSEO or Yoast in order to work more clearly!"
+msgstr ""
+"Attention plusieurs plugins sont susceptibles d'effectuer les même tâches, "
+"essayez de désactiver AIO SEO ou Yoast SEO"
+
+msgid ""
+"We have found that you’re using All In One Pack Plugin, WP Meta SEO can "
+"import the meta from this plugin, %s"
+msgstr ""
+"Vous utilisez actuellement All In One SEO Plugin, WP Meta SEO put importer "
+"les données de ce plugin pour vous, %s"
+
+msgid "Name is existing"
+msgstr "Ce nom existe déjà"
+
+msgid "We found 0 image which needed to add or change meta information"
+msgstr ""
+"Nous n'avons pas trouvé d'images qui nécessite l'ajout ou l'édition des meta"
+
+msgid "The post is not existed, please choose one another!"
+msgstr "Ce post n'existe pas, merci d'un sélectionner un autre"
+
+msgid "Image name was changed"
+msgstr "Nom d'image changé"
+
+msgid "File is not existed"
+msgstr "Ce fichier n'existe plus"
+
+msgid "There is a problem when update image meta!"
+msgstr "Erreur lors de la mise à jour des meta"
+
+msgid "The post has been deleted before, please check again!"
+msgstr "Ce contenu a été supprimé, merci de recharger la page"
+
+msgid ""
+" This is a rendering of what this post might look like in Google's search "
+"results."
+msgstr "Prévisualisation des résultats de recherche Google"
+
+msgid "This post is not existed or deleted, please choose one another!"
+msgstr "Ce post n'existe plus, merci d'en sélectionner un autre"
+
+msgid "Opps! An error occured when updating the post, please try again"
+msgstr "Oups! une erreur est survenue lors de la mise à jour du contenu"
+
+msgid "Upload Image"
+msgstr "Envoyer image"
+
+msgid "WP Meta SEO - Page optimization"
+msgstr "WP Meta SEO - Page optimisation"
+
+msgid "Meta title was saved"
+msgstr "Metz"
+
+msgid "Content Meta"
+msgstr "Meta content"
+
+msgid "Meta keywords was saved"
+msgstr "Mot clÃ©s enregistrÃ©s"
+
+msgid "Force SEO validation"
+msgstr "Forcer validation SEO"
+
+msgid ""
+"Allow user to force on page SEO criteria validation by clicking on the icon"
+msgstr ""
+"Autoriser la validation forcÃ©e des critÃ¨res SEO dans l'analyse des pages"
+
+msgid "Meta keywords"
+msgstr "Mot clés"
+
+msgid "Active meta keywords"
+msgstr "Activer les mot clés meta"
+
+msgid "Link text field"
+msgstr "Champ titre lien"
+
+msgid "Adds back the missing 'title' field in the Insert/Edit URL box"
+msgstr "Ajouter un champ titre dans l'outil d'édition de lien"
+
+msgid "Link titles"
+msgstr "Titres lien"
+
+msgid ""
+"The link title attribute does not have any SEO value for links. BUT links "
+"titles can influence click behavior for users, which may indirectly affect "
+"your SEO performance"
+msgstr ""
+"Les titres des liens n'ont pas d'impact direct sur le SEO MAIS cela peut "
+"influencer le comportement des utilisateurs en les incitant a cliquer dessus"
+
+msgid "Links title completed"
+msgstr "Titre de lien ajouté"
+
+msgid "Saved."
+msgstr "Enregistré"
+
+msgid "Error."
+msgstr "Erreur"
+
+msgid "Source"
+msgstr "Source"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Link title"
+msgstr "Titre liens"
+
+msgid "Link text"
+msgstr "Text lien"
+
+msgid "Link editor"
+msgstr "Link editor"
+
+msgid "Meta title as page title"
+msgstr "Meta titre vers titre page"
+
+msgid ""
+"When meta title is filled use it as page title instead of the content title"
+msgstr ""
+"Lorsque le meta titre est rempli, l'utiliser plutôt que le titre du contenu"
+
+msgid ""
+"It’s better using a permalink structure that is adding in your URL the "
+"category name and content title. This parameter can be changed in Settings > "
+"Permalinks WordPress menu. Tag recommended is %category%/%postname%"
+msgstr ""
+"Il est conseillé d'utiliser une structure d'URL qui inclus le nom de la "
+"catégorie et le titre du contenu. Ce paramètre peut être changé dans "
+"Paramètres > Permaliens. Le tag recommandé est %category%/%postname%"
+
+msgid ""
+"Meta descriptions are displayed in search engine results as a page "
+"description. It’s a good thing for SEO to have some custom and attractive "
+"ones. Be sure to fill at least the meta information on your most popular "
+"pages."
+msgstr ""
+"Les meta descriptions sont affichées dans les résultats de recherche si ils "
+"sont jugés pertinents. Il est bon pour avoir un taux de clics élevé d'en "
+"rédiger des attractifs. Assurez vous de les compléter au moins pour vos "
+"principales pages."
+
+msgid ""
+"Meta titles are displayed in search engine results as a page title. It’s a "
+"good thing for SEO to have some custom and attractive ones. Be sure to fill "
+"at least the met information on your most popular pages"
+msgstr ""
+"Les meta titres sont affichées dans les résultats de recherche. Il est bon "
+"pour avoir un taux de clics élevé d'en rédiger des attractifs. Assurez vous "
+"de les compléter au moins pour vos principales pages."
+
+msgid ""
+"A website with a bunch of 404 errors doesn’t provide a good user experience, "
+"which is significantly important in content marketing and SEO. We recommend "
+"to use our internal broken link checker and redirect tool to fix all the 404 "
+"error you can periodically."
+msgstr ""
+"Un site web qui contient beaucoup d'erreur 404 donne une mauvaise expérience "
+"d'utilisation, ce qui est très dommageable pour le marketing et le SEO. Nous "
+"vous recommandons de corriger le maximum d'erreur en faisant des "
+"redirections pertinentes."
+
+msgid "Index internal broken links"
+msgstr "Indexer les liens brisés"
+
+msgid "Type or Link text"
+msgstr "Type ou texte du lien"
+
+msgid "Hits number"
+msgstr "Nombre de clic"
+
+msgid "Status"
+msgstr "Status"
+
+msgid ""
+"Allow search engines robots to index this content, as default your content "
+"is indexed"
+msgstr "Autoriser les moteurs de recherche à indexer ce contenu"
+
+msgid ""
+"Provides show or do not show this page in search results in search results."
+msgstr "Afficher ou pas cette page dans les résultats des moteurs de recherche"
+
+msgid "Index"
+msgstr "Index"
+
+msgid "Follow"
+msgstr "Follow"
+
+msgid "Re-index content links"
+msgstr "Re-indexer liens"
+
+msgid "Apply"
+msgstr "Appliquer"
+
+msgid "-- Selection --"
+msgstr "-- Selection --"
+
+msgid "Follow selected"
+msgstr "Follow sélection"
+
+msgid "Nofollow selected"
+msgstr "Nofollow sélection"
+
+msgid "Follow all"
+msgstr "Follow tous"
+
+msgid "Nofollow all"
+msgstr "Nofollow tous"
+
+msgid "Link source"
+msgstr "Source lien"
+
+msgid "Internal"
+msgstr "Interne"
+
+msgid "External"
+msgstr "Externe"
+
+msgid "Post/Page follow"
+msgstr "Article/Page follow"
+
+msgid "Post/Page index"
+msgstr "Article/Page index"
+
+msgid "Use ImageRecycle image compression plugin to activate this feature"
+msgstr ""
+"Activation : l'installation du plugin de compression d'image ImageRecycle "
+"est nécessaire"
+
+msgid ""
+"Images represent around 60% of a web page weight. An image compression "
+"reduce the image size by up to 70% while preserving the same visual quality. "
+"Small loading time is great for SEO!"
+msgstr ""
+"Les images représentent en moyenne 60% du poids d'une page web. Une "
+"compression sans perte de qualité réduit de manière importante le poids de "
+"votre page, parfait pour le référencement !"

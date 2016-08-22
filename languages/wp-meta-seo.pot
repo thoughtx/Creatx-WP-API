@@ -1,0 +1,632 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Meta SEO\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_GB\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid "Twitter username (without @)"
+msgstr ""
+
+msgid "2 plugins that are doing almost the same thing detected: disable AIO SEO or Yoast SEO to avoid conflict."
+msgstr ""
+
+msgid "We have found that you’re using All In One SEO plugin, WP Meta SEO can import the meta from this plugin, %s"
+msgstr ""
+
+msgid "We have found that you’re using Yoast SEO plugin, WP Meta SEO can import the meta from this plugin, %s"
+msgstr ""
+
+msgid "Results preview"
+msgstr ""
+
+msgid "This is a preview of what your content will looks like in search engine results: title, description and URL"
+msgstr ""
+
+msgid "Search engine title"
+msgstr ""
+
+msgid "This is the title of your content that may be displayed in search engine results (meta title). By default it’s the content title (page title, post title…). 69 characters max allowed."
+msgstr ""
+
+msgid "Search engine description"
+msgstr ""
+
+msgid "The description of your content that may be displayed in search engine results aka meta description. By default search engine take an excerpt from your content (depending on the search query). 156 characters max allowed."
+msgstr ""
+
+msgid "Facebook Title"
+msgstr ""
+
+msgid "Custom title to display when sharing this content on facebook, content title override"
+msgstr ""
+
+msgid "Facebook Description"
+msgstr ""
+
+msgid "Custom description to display when sharing this content on facebook, content description override"
+msgstr ""
+
+msgid "Facebook Image"
+msgstr ""
+
+msgid "Custom image to display when sharing this content on facebook, content description override, recommended size is 1200px x 630px"
+msgstr ""
+
+msgid "Twitter Title"
+msgstr ""
+
+msgid "Custom title to display when sharing this content on twitter, content title override"
+msgstr ""
+
+msgid "Twitter Description"
+msgstr ""
+
+msgid "Custom description to display when sharing this content on twitter, content description override"
+msgstr ""
+
+msgid "Twitter Image"
+msgstr ""
+
+msgid "Custom image to display when sharing this content on facebook, content description override, recommended min size 440px X 220px"
+msgstr ""
+
+msgid "Use Image"
+msgstr ""
+
+msgid " (because of date display)"
+msgstr ""
+
+msgid "(no parent)"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Social"
+msgstr ""
+
+msgid "Page title word in content heading"
+msgstr ""
+
+msgid "Page title word in content"
+msgstr ""
+
+msgid "Page url matches with page title"
+msgstr ""
+
+msgid "Meta title filled"
+msgstr ""
+
+msgid "Meta description filled"
+msgstr ""
+
+msgid "Wrong image resize"
+msgstr ""
+
+msgid "Image have meta title or alt"
+msgstr ""
+
+msgid "SEO Page optimization"
+msgstr ""
+
+msgid "Social for search engine"
+msgstr ""
+
+msgid "Reload analysis"
+msgstr ""
+
+msgid "Filter by date"
+msgstr ""
+
+msgid "All dates"
+msgstr ""
+
+msgid "ID"
+msgstr ""
+
+msgid "Image"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Optimization Info"
+msgstr ""
+
+msgid "Alternative text"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Legend"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Select All"
+msgstr ""
+
+msgid "Filter"
+msgstr ""
+
+msgid "We didn't find any image which needed to be updated regarding meta information"
+msgstr ""
+
+msgid "This image has still not been inserted in any post!"
+msgstr ""
+
+msgid "We found %s which needed to optimize"
+msgstr ""
+
+msgid "Replace?"
+msgstr ""
+
+msgid "Replace All"
+msgstr ""
+
+msgid "The post doesn't exist, please select another one"
+msgstr ""
+
+msgid "There is a problem when update image name"
+msgstr ""
+
+msgid "Image name changed"
+msgstr ""
+
+msgid "Name already exist"
+msgstr ""
+
+msgid "File doesn't existed"
+msgstr ""
+
+msgid "Should not be empty"
+msgstr ""
+
+msgid "There is a problem during image meta update"
+msgstr ""
+
+msgid "This content has been deleted, please check again!"
+msgstr ""
+
+msgid "The post haven't been updated, please check again!"
+msgstr ""
+
+msgid "This image has been removed from the post, please check again!"
+msgstr ""
+
+msgid "Content of the post is empty, please check again"
+msgstr ""
+
+msgid "We can't get traffic rank from Alexa for this website"
+msgstr ""
+
+msgid "Meta Title"
+msgstr ""
+
+msgid "Meta Description"
+msgstr ""
+
+msgid "(no title)"
+msgstr ""
+
+msgid "Edit this item"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "This is a preview of what this content might looks like in Google's search results."
+msgstr ""
+
+msgid "Snippet Preview %s"
+msgstr ""
+
+msgid "Facebook profile URL"
+msgstr ""
+
+msgid "Twitter Username"
+msgstr ""
+
+msgid "Meta block edition"
+msgstr ""
+
+msgid "Modification was saved"
+msgstr ""
+
+msgid "Meta title was not saved"
+msgstr ""
+
+msgid "Meta description was not saved"
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "WP Meta SEO"
+msgstr ""
+
+msgid "Content meta"
+msgstr ""
+
+msgid "Image information"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Activate meta block edition in content"
+msgstr ""
+
+msgid "This post is not existed or deleted, please select another one"
+msgstr ""
+
+msgid "Well done! This image is perfect now."
+msgstr ""
+
+msgid "Oops! An error occured when updating the post, please try again"
+msgstr ""
+
+msgid "Resize image"
+msgstr ""
+
+msgid "Image sizes are good!"
+msgstr ""
+
+msgid "Fix meta"
+msgstr ""
+
+msgid "Edit meta"
+msgstr ""
+
+msgid "N/A"
+msgstr ""
+
+msgid "Poor"
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "Good"
+msgstr ""
+
+msgid "Bad"
+msgstr ""
+
+msgid "Homepage meta title"
+msgstr ""
+
+msgid "Homepage meta description"
+msgstr ""
+
+msgid "Bulk copy"
+msgstr ""
+
+msgid "All content"
+msgstr ""
+
+msgid "Selected posts"
+msgstr ""
+
+msgid "Content title as meta title"
+msgstr ""
+
+msgid "All Images"
+msgstr ""
+
+msgid "Selected images"
+msgstr ""
+
+msgid "Image name as alt text"
+msgstr ""
+
+msgid "Image name as image title"
+msgstr ""
+
+msgid "Warning, you're about to replace existing image alt or tile content, are you sire about that?"
+msgstr ""
+
+msgid "Twitter card type "
+msgstr ""
+
+msgid "Summary"
+msgstr ""
+
+msgid "Summary with large image"
+msgstr ""
+
+msgid "Optimized at"
+msgstr ""
+
+msgid "Wrong resized images"
+msgstr ""
+
+msgid "Latest month new or updated content"
+msgstr ""
+
+msgid "Image data filled (in content)"
+msgstr ""
+
+msgid "More information about WP Meta SEO"
+msgstr ""
+
+msgid "Other plugins from JoomUnited"
+msgstr ""
+
+msgid "Check if a word of this content title is also in a title heading (h1, h2...)"
+msgstr ""
+
+msgid "Check if a word of this content title is also in the text"
+msgstr ""
+
+msgid "Does the page title match with the permalink (URL structure)"
+msgstr ""
+
+msgid "Is the meta title of this page filled?"
+msgstr ""
+
+msgid "Is the meta description of this page filled?"
+msgstr ""
+
+msgid "Check for image HTML resizing in content (usually image resized using handles)"
+msgstr ""
+
+msgid "Check for image Alt text and title"
+msgstr ""
+
+msgid "It's better using a permalink structure that is adding in your URL the category name and content title. This parameter can be changed in Settings > Permalinks WordPress menu. Tag recommended is %category%/%postname%"
+msgstr ""
+
+msgid "Meta titles are displayed in search engine results as a page title. It's a good thing for SEO to have some custom and attractive ones. Be sure to fill at least the met information on your most popular pages"
+msgstr ""
+
+msgid "Meta descriptions are displayed in search engine results as a page description. It's a good thing for SEO to have some custom and attractive ones. Be sure to fill at least the meta information on your most popular pages."
+msgstr ""
+
+msgid "Display image at its natural size, do not use HTML resize. It happens usually when you use handles to resize an image. You have a bulk edition tool to fix that."
+msgstr ""
+
+msgid "We recommend to use both alt text and image title. The main advantage is that it helps search engines discover your images and display them in image search results. Plus, these tags improve the accessibility of your site and give more information about your images. Use our bulk image tool to quickly check and fix that."
+msgstr ""
+
+msgid "It is highly recommended to update or add new content on your website quite frequently. At least 3 updated or new content per month would be great :)"
+msgstr ""
+
+msgid "Social networks meta"
+msgstr ""
+
+msgid "Activate social edition"
+msgstr ""
+
+msgid "Permalinks settings"
+msgstr ""
+
+msgid "HTML image resizing"
+msgstr ""
+
+msgid "Image title/alt"
+msgstr ""
+
+msgid "New or updated content"
+msgstr ""
+
+msgid "WP Meta SEO dashboard"
+msgstr ""
+
+msgid "Latest WP Meta SEO News"
+msgstr ""
+
+msgid "All Posts"
+msgstr ""
+
+msgid "We can't get rank of this site from Alexa.com!"
+msgstr ""
+
+msgid "Activate meta block edition below content"
+msgstr ""
+
+msgid "Well! This image is so good now."
+msgstr ""
+
+msgid "The default card type to use"
+msgstr ""
+
+msgid "Be careful you installed 2 extensions doing almost the same thing, please deactivate AIOSEO or Yoast in order to work more clearly!"
+msgstr ""
+
+msgid "We have found that you’re using All In One Pack Plugin, WP Meta SEO can import the meta from this plugin, %s"
+msgstr ""
+
+msgid "Name is existing"
+msgstr ""
+
+msgid "We found 0 image which needed to add or change meta information"
+msgstr ""
+
+msgid "The post is not existed, please choose one another!"
+msgstr ""
+
+msgid "Image name was changed"
+msgstr ""
+
+msgid "File is not existed"
+msgstr ""
+
+msgid "There is a problem when update image meta!"
+msgstr ""
+
+msgid "The post has been deleted before, please check again!"
+msgstr ""
+
+msgid " This is a rendering of what this post might look like in Google's search results."
+msgstr ""
+
+msgid "This post is not existed or deleted, please choose one another!"
+msgstr ""
+
+msgid "Opps! An error occured when updating the post, please try again"
+msgstr ""
+
+msgid "Upload Image"
+msgstr ""
+
+msgid "WP Meta SEO - Page optimization"
+msgstr ""
+
+msgid "Meta title was saved"
+msgstr ""
+
+msgid "Content Meta"
+msgstr ""
+
+msgid "Meta keywords was saved"
+msgstr ""
+
+msgid "Force SEO validation"
+msgstr ""
+
+msgid "Allow user to force on page SEO criteria validation by clicking on the icon"
+msgstr ""
+
+msgid "Meta keywords"
+msgstr ""
+
+msgid "Active meta keywords"
+msgstr ""
+
+msgid "Link text field"
+msgstr ""
+
+msgid "Adds back the missing 'title' field in the Insert/Edit URL box"
+msgstr ""
+
+msgid "Link titles"
+msgstr ""
+
+msgid "The link title attribute does not have any SEO value for links. BUT links titles can influence click behavior for users, which may indirectly affect your SEO performance"
+msgstr ""
+
+msgid "Links title completed"
+msgstr ""
+
+msgid "Saved."
+msgstr ""
+
+msgid "Error."
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "URL"
+msgstr ""
+
+msgid "Link title"
+msgstr ""
+
+msgid "Link text"
+msgstr ""
+
+msgid "Link editor"
+msgstr ""
+
+msgid "Meta title as page title"
+msgstr ""
+
+msgid "When meta title is filled use it as page title instead of the content title"
+msgstr ""
+
+msgid "It’s better using a permalink structure that is adding in your URL the category name and content title. This parameter can be changed in Settings > Permalinks WordPress menu. Tag recommended is %category%/%postname%"
+msgstr ""
+
+msgid "Meta descriptions are displayed in search engine results as a page description. It’s a good thing for SEO to have some custom and attractive ones. Be sure to fill at least the meta information on your most popular pages."
+msgstr ""
+
+msgid "Meta titles are displayed in search engine results as a page title. It’s a good thing for SEO to have some custom and attractive ones. Be sure to fill at least the met information on your most popular pages"
+msgstr ""
+
+msgid "A website with a bunch of 404 errors doesn’t provide a good user experience, which is significantly important in content marketing and SEO. We recommend to use our internal broken link checker and redirect tool to fix all the 404 error you can periodically."
+msgstr ""
+
+msgid "Index internal broken links"
+msgstr ""
+
+msgid "Type or Link text"
+msgstr ""
+
+msgid "Hits number"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Allow search engines robots to index this content, as default your content is indexed"
+msgstr ""
+
+msgid "Provides show or do not show this page in search results in search results."
+msgstr ""
+
+msgid "Index"
+msgstr ""
+
+msgid "Follow"
+msgstr ""
+
+msgid "Re-index content links"
+msgstr ""
+
+msgid "Apply"
+msgstr ""
+
+msgid "-- Selection --"
+msgstr ""
+
+msgid "Follow selected"
+msgstr ""
+
+msgid "Nofollow selected"
+msgstr ""
+
+msgid "Follow all"
+msgstr ""
+
+msgid "Nofollow all"
+msgstr ""
+
+msgid "Link source"
+msgstr ""
+
+msgid "Internal"
+msgstr ""
+
+msgid "External"
+msgstr ""
+
+msgid "Post/Page follow"
+msgstr ""
+
+msgid "Post/Page index"
+msgstr ""
+
+msgid "Use ImageRecycle image compression plugin to activate this feature"
+msgstr ""
+
+msgid "Images represent around 60% of a web page weight. An image compression reduce the image size by up to 70% while preserving the same visual quality. Small loading time is great for SEO!"
+msgstr ""
